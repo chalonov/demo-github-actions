@@ -1,0 +1,40 @@
+name: Script de Bienvenida
+
+# Define cuándo se ejecutará el workflow
+on:
+  # Se ejecuta cuando hay push al branch main
+  push:
+    branches: [ main ]
+  
+  # Se ejecuta cuando hay pull request al branch main
+  pull_request:
+    branches: [ main ]
+  
+  # Permite ejecutar manualmente el workflow
+  workflow_dispatch:
+
+jobs:
+  ejecutar-bienvenida:
+    # El tipo de runner que ejecutará el job
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Descarga el código del repositorio
+    - uses: actions/checkout@v4
+    
+    # Configura Python
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    # Instala dependencias (si las tienes)
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        # Si tienes un requirements.txt, descomenta la siguiente línea:
+        # pip install -r requirements.txt
+    
+    # Ejecuta el script de bienvenida
+    - name: Ejecutar script de bienvenida
+      run: python greetings.py
