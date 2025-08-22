@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
 def mensaje_bienvenida():
     print("=" * 60)
@@ -7,8 +8,8 @@ def mensaje_bienvenida():
     print("=" * 60)
     
     # Obtener variables de entorno si existen
-    nombre = os.getenv('USUARIO_NOMBRE', 'Usuario')
-    ambiente = os.getenv('AMBIENTE', 'desarrollo')
+    nombre = os.getenv('USUARIO_NOMBRE')
+    ambiente = os.getenv('AMBIENTE')
     
     print(f"¡Hola {nombre}!")
     print(f"Ambiente: {ambiente}")

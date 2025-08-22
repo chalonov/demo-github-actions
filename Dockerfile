@@ -7,9 +7,9 @@ WORKDIR /app
 # Copiar el script de Python al contenedor
 COPY greetings.py .
 
-# Instalar dependencias si las hay (opcional)
-# COPY requirements.txt .
-# RUN pip install --no-cache-dir -r requirements.txt
+# Copiar requirements y instalar dependencias
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Comando por defecto para ejecutar el script
 CMD ["python", "greetings.py"]
