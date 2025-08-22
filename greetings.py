@@ -8,8 +8,8 @@ def mensaje_bienvenida():
     print("=" * 60)
     
     # Obtener variables de entorno si existen
-    nombre = os.getenv('USUARIO_NOMBRE')
-    ambiente = os.getenv('AMBIENTE')
+    nombre = os.getenv('USUARIO_NOMBRE', 'Usuario')
+    ambiente = os.getenv('AMBIENTE', 'github actions')
     
     print(f"¡Hola {nombre}!")
     print(f"Ambiente: {ambiente}")
