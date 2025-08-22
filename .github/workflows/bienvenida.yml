@@ -38,3 +38,6 @@ jobs:
     # Ejecuta el script de bienvenida
     - name: Ejecutar script de bienvenida
       run: python greetings.py
+        env:
+        USUARIO_NOMBRE: "GitHub Actions Bot"
+        AMBIENTE: "ci-cd"
