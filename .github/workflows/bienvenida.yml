@@ -39,5 +39,5 @@ jobs:
     - name: Ejecutar script de bienvenida
       run: python greetings.py
       env:
-        USUARIO_NOMBRE: ${{ secrets.SECRET_USER }}
+        USUARIO_NOMBRE: "GitHub Actions Bot"
         AMBIENTE: "ci-cd"
