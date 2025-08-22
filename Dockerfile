@@ -12,4 +12,4 @@ COPY greetings.py .
 # RUN pip install --no-cache-dir -r requirements.txt
 
 # Comando por defecto para ejecutar el script
-CMD ["python", "greeting.py"]
+CMD ["python", "greetings.py"]
