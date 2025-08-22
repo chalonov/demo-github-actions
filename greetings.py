@@ -1,11 +1,21 @@
+import os
+from datetime import datetime
+
 def mensaje_bienvenida():
-    print("=" * 50)
-    print("    🎉 BIENVENIDA AUTOMATIZADA 🎉")
-    print("=" * 50)
-    print("¡Hola Gonzalo! Este script se ejecutó exitosamente.")
-    print("GitHub Actions está funcionando correctamente.")
-    print("¡Gracias por usar nuestro sistema!")
-    print("=" * 50)
+    print("=" * 60)
+    print("    🐳 CONTENEDOR DE BIENVENIDA 🐳")
+    print("=" * 60)
+    
+    # Obtener variables de entorno si existen
+    nombre = os.getenv('USUARIO_NOMBRE', 'Usuario')
+    ambiente = os.getenv('AMBIENTE', 'desarrollo')
+    
+    print(f"¡Hola {nombre}!")
+    print(f"Ambiente: {ambiente}")
+    print(f"Hora de ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("Este script se está ejecutando dentro de un contenedor Docker.")
+    print("¡Bienvenido a la containerización!")
+    print("=" * 60)
 
 if __name__ == "__main__":
     mensaje_bienvenida()
