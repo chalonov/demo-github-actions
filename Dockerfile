@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copiar el script de Python al contenedor
-COPY bienvenida.py .
+COPY greetings.py .
 
 # Instalar dependencias si las hay (opcional)
 # COPY requirements.txt .
