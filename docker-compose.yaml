@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  bienvenida-app:
+    build: .
+    container_name: script_bienvenida
+    env_file:
+      - .env
+    # También puedes sobrescribir variables específicas:
+    environment:
+      - AMBIENTE=docker-compose
+    volumes:
+      # Opcional: montar el código para desarrollo
+      - ./greetings.py:/app/greetings.py

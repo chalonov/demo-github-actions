@@ -8,8 +8,8 @@ def mensaje_bienvenida():
     print("=" * 60)
     
     # Obtener variables de entorno si existen
-    nombre = os.getenv('USUARIO_NOMBRE')
-    ambiente = os.getenv('AMBIENTE')
+    nombre = os.getenv('USUARIO_NOMBRE', 'Desarrollador')
+    ambiente = os.getenv('AMBIENTE', 'Desarrollo')
     
     print(f"¡Hola {nombre}!")
     print(f"Ambiente: {ambiente}")
