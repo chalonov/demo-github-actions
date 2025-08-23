@@ -22,7 +22,7 @@ jobs:
     - name: Ejecutar contenedor
       run: |
         docker run --rm \
-          -e USUARIO_NOMBRE="GitHub Actions" \
+          -e USUARIO_NOMBRE="Gonzalo" \
           -e AMBIENTE="CI/CD" \
           script-bienvenida
     
